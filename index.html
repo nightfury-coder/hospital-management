@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Signup</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2 id="formTitle">Login</h2>
+        <form id="authForm">
+            <div class="input-group">
+                <input type="text" id="username" placeholder="Username" required>
+            </div>
+            <div class="input-group" id="emailField">
+                <input type="email" id="email" placeholder="Email" required>
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" placeholder="Password" required>
+            </div>
+            <button type="submit" id="submitButton">Login</button>
+            
+            <div class="social-buttons">
+                <button class="google-btn">Login with Google</button>
+                <button>Login with Facebook</button>
+            </div>
+        </form>
+        <span class="toggle-link" id="toggleForm">Don't have an account? Sign up</span>
+    </div>
+
+    <script>
+        const formTitle = document.getElementById("formTitle");
+        const authForm = document.getElementById("authForm");
+        const emailField = document.getElementById("emailField");
+        const submitButton = document.getElementById("submitButton");
+        const toggleForm = document.getElementById("toggleForm");
+
+        let isSignup = false;
+
+        toggleForm.addEventListener("click", function() {
+            isSignup = !isSignup;
+            if (isSignup) {
+                formTitle.innerText = "Sign Up";
+                emailField.style.display = "block";
+                submitButton.innerText = "Sign Up";
+                toggleForm.innerText = "Already have an account? Login";
+            } else {
+                formTitle.innerText = "Login";
+                emailField.style.display = "none";
+                submitButton.innerText = "Login";
+                toggleForm.innerText = "Don't have an account? Sign up";
+            }
+        });
+
+        authForm.addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form from submitting normally
+
+            // Redirect to dashboard.html after login or signup
+            window.location.href = "dashboard.html";
+        });
+
+        // Hide email field by default (only for sign-up)
+        emailField.style.display = "none";
+    </script>
+
+<script src="app.js"></script>
+</body>
+</html>

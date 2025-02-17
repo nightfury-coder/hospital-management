@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ND Hospital Dashboard</title>
+    <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+
+    <!-- Header & Navigation Bar -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="hospital_logo.png" alt="Hospital Logo">
+            <h2>ND Hospital</h2>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search patients, doctors, appointments...">
+            <button>Search</button>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="appointment.html">Appointments</a></li>
+            <li><a href="#patients">Patients</a></li>
+            <li><a href="#billing">Billing</a></li>
+            <li><a href="#reports">Reports</a></li>
+            <li><a href="videochat.html">Video Chat</a></li>
+            <li class="notifications">🔔</li>
+            <li class="profile">👤 User | Logout</li>
+        </ul>
+    </header>
+
+    <!-- Overview / Quick Stats Section -->
+    <section class="overview">
+        <div class="stat">Total Patients: <span>120</span></div>
+        <div class="stat">Today's Appointments: <span>30</span></div>
+        <div class="stat">Doctors on Duty: <span>15</span></div>
+        <div class="stat">Emergency Cases: <span>5</span></div>
+        <div class="stat">Billing Pending: <span>$5000</span></div>
+    </section>
+
+    <!-- Appointment Management -->
+    <section class="appointments">
+        <h2>Upcoming Appointments</h2>
+        <table>
+            <tr><th>Patient</th><th>Doctor</th><th>Time</th><th>Status</th></tr>
+            <tr><td>John Doe</td><td>Dr. Smith</td><td>10:00 AM</td><td>Confirmed</td></tr>
+            <tr><td>Jane Roe</td><td>Dr. Adams</td><td>11:30 AM</td><td>Pending</td></tr>
+        </table>
+        <button onclick="window.location.href='appointment.html'">Manage Appointments</button>
+    </section>
+
+    <!-- Video Chat Management -->
+    <section class="video-chat">
+        <h2>Video Consultation</h2>
+        <button onclick="window.location.href='videochat.html'">Start Video Chat</button>
+    </section>
+
+    <!-- Patient Management -->
+    <section class="patients">
+        <h2>Patient Records</h2>
+        <button>New Patient</button>
+        <input type="text" placeholder="Search by Name or ID">
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 ND Hospital | Contact: info@ndhospital.com</p>
+    </footer>
+
+</body>
+</html>
